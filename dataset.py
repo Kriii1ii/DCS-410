@@ -1,23 +1,3 @@
-"""
-dataset.py
-----------
-Keyboard Semantic Segmentation Dataset
-
-Loads images and binary masks from the Roboflow COCO-format dataset.
-
-Since this Roboflow export contains bounding-box annotations only
-(segmentation field is always []), this module:
-  1. Reads the _annotations.coco.json for each split
-  2. Generates a binary mask from the bounding-box annotation
-     (foreground = 1 inside the box, 0 outside)
-  3. If a polygon segmentation IS present (future-proof), uses that instead
-  4. Resizes images and masks to 256×256
-  5. Normalises images to [0, 1] and converts masks to binary {0, 1}
-  6. Returns (image_tensor [C,H,W], mask_tensor [1,H,W]) pairs
-
-Compatible with torch.utils.data.DataLoader.
-"""
-
 import os
 import json
 import numpy as np

@@ -1,24 +1,3 @@
-"""
-model.py
---------
-Binary U-Net architecture for semantic segmentation.
-
-Architecture overview:
-  Encoder:
-    Block 1 → Conv(3→64)   → BN → ReLU → MaxPool
-    Block 2 → Conv(64→128) → BN → ReLU → MaxPool
-  Bottleneck:
-    Block 3 → Conv(128→256) → BN → ReLU
-  Decoder:
-    Up 1    → TransposedConv(256→128) + Skip-connection → Conv(256→128) → BN → ReLU
-    Up 2    → TransposedConv(128→64)  + Skip-connection → Conv(128→64)  → BN → ReLU
-  Output head:
-    Conv(64→1) → Sigmoid  (binary probability map)
-
-Input shape  : (B, 3, H, W) – normalised RGB in [0, 1]
-Output shape : (B, 1, H, W) – foreground probability in [0, 1]
-"""
-
 import torch
 import torch.nn as nn
 

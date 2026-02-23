@@ -1,24 +1,3 @@
-"""
-evaluate.py
------------
-Evaluation script for the trained U-Net model.
-
-Usage:
-    python evaluate.py
-
-What it does:
-  1. Loads the test subset of the Keyboard dataset (same seed / split as train.py)
-  2. Loads the saved model weights from `unet_keyboard.pth`
-  3. Runs inference on the entire test set
-  4. Computes average Dice coefficient & average IoU score
-  5. Prints a detailed performance report with interpretation
-  6. Saves a visualisation panel (`predictions_sample.png`) showing:
-       • Original image
-       • Ground-truth mask
-       • Predicted mask (thresholded at 0.5)
-     … for up to 6 randomly selected test samples
-"""
-
 import os
 import random
 import torch

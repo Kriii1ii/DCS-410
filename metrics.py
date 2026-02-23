@@ -1,16 +1,3 @@
-"""
-metrics.py
-----------
-Evaluation metrics for binary segmentation.
-
-Implements:
-  • Dice Coefficient  (F1 of segmentation masks)
-  • IoU Score         (Jaccard Index)
-
-Both functions accept batched or single tensors and work with either
-raw sigmoid probabilities (thresholded at 0.5) or pre-thresholded binary maps.
-"""
-
 import torch
 
 

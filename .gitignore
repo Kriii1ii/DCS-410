@@ -1,3 +1,4 @@
+train/_annotations.coco.json
 venv/
 __pycache__/
 *.pth

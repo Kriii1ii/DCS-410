@@ -1,21 +1,3 @@
-"""
-train.py
---------
-Training script for Binary U-Net on the Keyboard segmentation dataset.
-
-Usage:
-    python train.py
-
-What it does:
-  1. Loads the dataset and splits it into train / validation / test sets
-  2. Builds the U-Net model and moves it to GPU/MPS (if available)
-  3. Trains for NUM_EPOCHS using BCELoss and Adam optimiser
-  4. Validates after every epoch (no gradient updates)
-  5. Prints per-epoch train/val losses
-  6. Saves the best model weights to `unet_keyboard.pth`
-  7. Plots training & validation loss curves to `loss_curve.png`
-"""
-
 import os
 import torch
 import torch.nn as nn
