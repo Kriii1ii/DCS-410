@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "KEYBOARD",
+			"path": ".."
+		},
+		{
+			"name": "roboflow",
+			"path": "../../../roboflow"
+		}
+	],
+	"settings": {}
+}
